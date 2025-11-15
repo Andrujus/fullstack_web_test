@@ -1,0 +1,18 @@
+body {
+    margin: 0px;
+}
+html{
+    font-size: 100%;
+}
+
+.hero-img{
+    background-image: url("img/hero.jpg");
+    height: 100vh;
+    background-position: center;
+    width: 100%;
+}
+
+.hero-container{
+    background-color: aqua;
+    position: relative;
+}
