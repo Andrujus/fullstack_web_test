@@ -1,0 +1,7 @@
+.movie-card{
+    display: grid;
+    background-color: rgb(99, 98, 98);
+    height: 400px;
+    width: 250px;
+    border-radius: 6px;
+}

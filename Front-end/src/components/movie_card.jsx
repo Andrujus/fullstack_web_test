@@ -1,3 +1,4 @@
+import "../css/movie_card.css"
 
 function MovieCard({movie}){
 
