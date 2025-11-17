@@ -5,11 +5,18 @@ import MovieCard from "./components/movie_card"
 import './App.css'
 
 function App() {
+  const movieNumber = 1;
+
   return (
     <>
-      <MovieCard movie={{title: "Justas Andru", release_date: "2005"}}></MovieCard>
+      {movieNumber === 1 ? (<MovieCard movie={{title: "Justas Andru", release_date: "2005"}}></MovieCard>
+      ) : (
+      <MovieCard movie={{title: "Justas Andrusk", release_date: "2005"}}></MovieCard>
+      )}
     </>
   )
+
+  
 }
 
 
