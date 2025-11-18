@@ -2,6 +2,8 @@ import "../css/movie_card.css"
 
 function MovieCard({movie}){
 
+    const imagePath = new URL(`../assets/img/${movie.image}`, import.meta.url).href;
+
     function onFavClick(){
         alert("clicked")
     }
@@ -9,7 +11,7 @@ function MovieCard({movie}){
     return(
         <div className="movie-card">
         <div className="movie-img">
-            <img src={movie.url} alt={movie.title}></img>
+            <img src={imagePath} alt={movie.title}></img>
             <div className="movie-overlay">
                 <button className="favorite-btn" onClick={onFavClick}>❤️</button>
             </div>

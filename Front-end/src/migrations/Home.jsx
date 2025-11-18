@@ -4,11 +4,13 @@ import Add_movie from "../components/add_movie";
 import {useState} from "react"
 
 function Home (){
+    
+
     const [movies, setMovies] = useState([
-        {id: 1, title:"Interstellar", release_date: "2014"},
-        {id: 2, title:"Fight Club", release_date: "1999"},
-        {id: 3, title:"Shutter Island", release_date: "2009"},
-        {id: 4, title:"Seven", release_date: "1995"}
+        {id: 1, title:"Interstellar", release_date: "2014", image: "interstellar.jpg"},
+        {id: 2, title:"Fight Club", release_date: "1999", image: "fight-club.jpg"},
+        {id: 3, title:"Shutter Island", release_date: "2009", image: "shutter-island.jpg"},
+        {id: 4, title:"Seven", release_date: "1995", image: "seven.jpg"}
     ]);
     
     const [searchQuery, setSearchQuery] = useState("");
@@ -32,7 +34,7 @@ function Home (){
 
         <div className="movies-grid">
             {movies.map(movie => (
-            movie.title.toLowerCase().startsWith(searchQuery) && (<MovieCard movie={movie} key={movie.id}
+            movie.title.toLowerCase().startsWith(searchQuery) && (<MovieCard movie={movie} key={movie.id} image={movie.image}
             />)
         ))}
         </div>
