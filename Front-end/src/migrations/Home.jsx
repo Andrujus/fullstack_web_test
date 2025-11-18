@@ -36,7 +36,7 @@ function Home (){
             />)
         ))}
         </div>
-        <Add_movie></Add_movie>
+        <Add_movie movies={movies} setMovies={setMovies}/>
     </div>
     )
 };
