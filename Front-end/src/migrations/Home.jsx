@@ -1,19 +1,21 @@
 import MovieCard from "../components/movie_card"
 import "../css/Home.css"
+import Add_movie from "../components/add_movie";
 import {useState} from "react"
 
 function Home (){
-    const movies = [
+    const [movies, setMovies] = useState([
         {id: 1, title:"Interstellar", release_date: "2014"},
-        {id: 2, title:"Fight Club", release_date: "2005"},
-        {id: 3, title:"Shutter Island", release_date: "2009"}
-    ]
+        {id: 2, title:"Fight Club", release_date: "1999"},
+        {id: 3, title:"Shutter Island", release_date: "2009"},
+        {id: 4, title:"Seven", release_date: "1995"}
+    ]);
     
     const [searchQuery, setSearchQuery] = useState("");
 
     const handleSearch = (e) =>{
         e.preventDefault()
-        alert(searchQuery);
+        alert("Type at least one symbol");
     };
 
     return (
@@ -34,6 +36,7 @@ function Home (){
             />)
         ))}
         </div>
+        <Add_movie></Add_movie>
     </div>
     )
 };
