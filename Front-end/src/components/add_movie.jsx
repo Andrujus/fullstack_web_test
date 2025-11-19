@@ -8,6 +8,7 @@ const newId = () =>{
 }
 const [newTitle, setNewTitle] = useState('');
 const [newRelease, setNewRelease] = useState('');
+const [newImage, setNewImage] = useState('');
 
 const AddMovie = (e) => {
     e.preventDefault();
@@ -16,7 +17,8 @@ const AddMovie = (e) => {
         {
             id: newId(),
             title: newTitle,
-            release_date: newRelease
+            release_date: newRelease,
+            image: newImage
         }
 ])
         
@@ -54,7 +56,7 @@ const [showForm, setShowForm] = useState(false);
                         <ul className="file-preview"></ul>
                         <button id="clear-btn">Clear</button>
 
-                        <button className="submit" type="submit">
+                        <button className="submit" type="submit" onClick={AddMovie}>
                             Submit
                         </button>
                     </form>
