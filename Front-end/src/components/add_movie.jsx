@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../css/add_movie.css"
 
 function Add_movie ({movies, setMovies}){
 
@@ -34,6 +35,7 @@ const [showForm, setShowForm] = useState(false);
                         <input 
                             className="new-title-input" 
                             type="text"
+                            placeholder="Title name"
                             value={newTitle}
                             onChange={(e)=>setNewTitle(e.target.value)}
                         />
@@ -41,9 +43,16 @@ const [showForm, setShowForm] = useState(false);
                         <input 
                             className="new-release-input" 
                             type="text"
+                            placeholder="Release year"
                             value={newRelease}
                             onChange={(e)=>setNewRelease(e.target.value)}
                         />
+                        <label className="file-drop">
+                            Drop images here, or click to upload.
+                            <input type="file" className="file-input" multiple accept="image/*" />
+                        </label>
+                        <ul className="file-preview"></ul>
+                        <button id="clear-btn">Clear</button>
 
                         <button className="submit" type="submit">
                             Submit
