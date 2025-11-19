@@ -20,8 +20,8 @@ const AddMovie = (e) => {
             release_date: newRelease,
             image: newImage
         }
-])
-        
+    ])
+    setShowForm(false)        
 }
 
 const [showForm, setShowForm] = useState(false);
@@ -56,7 +56,9 @@ const [showForm, setShowForm] = useState(false);
                         <ul className="file-preview"></ul>
                         <button id="clear-btn">Clear</button>
 
-                        <button className="submit" type="submit" onClick={AddMovie}>
+                        <button className="submit" type="submit" onClick={() => {
+                            AddMovie();
+                            }}>
                             Submit
                         </button>
                     </form>
