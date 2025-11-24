@@ -21,7 +21,14 @@ const AddMovie = (e) => {
             image: newImage
         }
     ])
-    setShowForm(false)        
+    setShowForm(false)
+}
+
+const clearForm = () =>{
+    newId = newId - 1;
+    setNewTitle = "";
+    setNewRelease = "";
+    setNewImage = "";
 }
 
 const [showForm, setShowForm] = useState(false);
@@ -54,7 +61,7 @@ const [showForm, setShowForm] = useState(false);
                             <input type="file" className="file-input" multiple accept="image/*" />
                         </label>
                         <ul className="file-preview"></ul>
-                        <button id="clear-btn">Clear</button>
+                        <button className="clear-btn" onClick={clearForm}>Clear</button>
 
                         <button className="submit" type="submit" onClick={() => {
                             AddMovie();
